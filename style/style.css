@@ -1,0 +1,145 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+u, i, center,
+dl, dt, dd, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family:'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'Lucida Grande', 'Luxi Sans', Arial, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+
+body{background-color: #5e5e5e;}
+.container{
+    width: 998px;
+    height: 228px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+section{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+/* table */
+th,td{border: 1px solid #fff;}
+thead{
+    background-color: #000;
+    font-weight: bold;
+    color: #fff;
+}
+thead th{ text-align: left; }
+tbody tr:nth-of-type(even){
+    background-color: #ccc;
+}
+tbody tr:nth-of-type(-n+3){ color: red; }
+
+/* input */
+.input{ width: 300px; }
+input{
+    width: 150px;
+    height: 30px;
+    -o-transition: width .5s;
+    -moz-transition: width .5s;
+    -webkit-transition: width .5s;
+    transition: width .5s;
+}
+input:focus{
+    width: 300px;
+}
+.images,.slider{
+    /* Remove space between inline-block elements*/
+    font-size: 0;
+    -webkit-text-size-adjust: none;
+}
+.carousel input{display: none;}
+
+/* carousel */
+.carousel{
+    width: 360px;
+    position: relative;
+    overflow: hidden;
+}
+.images{
+    width: 700%;
+    height: 100%;
+    position: relative;
+    -o-transition: left 1s;
+    -moz-transition: left 1s;
+    -webkit-transition: left 1s;
+    transition: left 1s;
+}
+.images img{
+    width: 360px;
+    height: 188px;
+    display: inline-block;
+}
+.slider{
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+.slider a{
+    background-color: #eee;
+    font-size: 16px;
+    color: #222;
+    padding: 4px 6px;
+    margin-left: 1px;
+}
+.slider a:hover{
+    background-color: #ccc;
+}
+#item1:target~.images{left:0;}
+#item2:target~.images{left:-100%;}
+#item3:target~.images{left:-200%;}
+#item4:target~.images{left:-300%;}
+#item5:target~.images{left:-400%;}
+#item6:target~.images{left:-500%;}
+#item7:target~.images{left:-600%;}
